@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Classroom</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>🎓 My Classroom</h1>
+  <p>Welcome to our class portal</p>
+</header>
+
+<nav>
+  <a href="#announcements">Announcements</a>
+  <a href="#files">Files</a>
+  <a href="#contact">Contact</a>
+
+  <button id="logoutBtn">Logout</button>
+</nav>
+
+<section id="announcements">
+
+  <h2>📢 Announcements</h2>
+
+  <div id="postSection">
+
+    <button id="postBtn">
+      Post Announcement
+    </button>
+
+    <div id="postForm" style="display:none;">
+
+      <input type="text"
+             id="subject"
+             placeholder="Subject">
+
+      <textarea id="description"
+                placeholder="Description"></textarea>
+
+      <input type="date"
+             id="postedDate">
+
+      <button id="submitPost">
+        Upload
+      </button>
+
+    </div>
+
+  </div>
+
+  <div id="announcementList"></div>
+
+</section>
+
+<section id="files">
+
+  <h2>📂 Class Files</h2>
+
+  <button id="fileBtn">
+    📤 Post File
+  </button>
+
+  <div id="fileForm" style="display:none;">
+
+    <input type="text"
+           id="fileSubject"
+           placeholder="Subject">
+
+    <input type="file"
+           id="fileUpload">
+
+    <button id="uploadFileBtn">
+      Upload File
+    </button>
+
+  </div>
+
+  <div id="filesList"></div>
+
+</section>
+
+<section id="contact">
+
+  <h2>📞 Contact</h2>
+
+  <div class="card">
+    <p><b>CR:</b> D.Venukumar</p>
+    <p><b>Email:</b> dvenu123@gmail.com</p>
+  </div>
+
+</section>
+
+<footer>
+  <p>© 2026 My Classroom | Developed by D.Venukumar </p>
+  <p>  All Rights Reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
