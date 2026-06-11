@@ -1,0 +1,134 @@
+Q1. Why is String immutable in Java?
+
+Answer:
+
+String is immutable, meaning its value cannot be changed after creation. If we modify a String, Java creates a new object instead of changing the existing one.
+
+Reasons:
+
+Security – Prevents modification of sensitive data like passwords, URLs, and file paths.
+String Pool – Multiple references can safely share the same String object, saving memory.
+Thread Safety – Multiple threads can use the same String without synchronization.
+HashMap Performance – Cached hash codes remain valid because String values never change.
+
+Example:
+
+String s = "Hello";
+s = s + " Java";
+
+A new String object "Hello Java" is created; the original "Hello" remains unchanged.
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+Q2. If String is immutable, then how does this work?
+
+String s = "Hello";
+s = s + " Java";
+
+A: String objects cannot be modified. Java creates a new String object containing "Hello Java" and makes the reference s point to the new object, while the original "Hello" remains unchanged.
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+Q3: Difference between ArrayList and LinkedList.
+
+ArrayList
+Internally uses a dynamic array.
+Elements are stored in contiguous memory locations.
+
+LinkedList
+Internally uses a doubly linked list.
+Each node contains:
+Data,Previous node reference,Next node reference
+
+Time Complexity:
+Operation	  ArrayList	LinkedList
+Access by index     O(1)	    O(n)
+Search	            O(n)	    O(n)
+Insert at end	 O(1) amortized	    O(1)
+Insert in middle    O(n)	    O(1)*
+Delete in middle    O(n)	    O(1)*
+
+* If you already have the node reference.
+
+When to Use ArrayList?
+Frequent searching/access by index.
+More read operations than insertions/deletions.
+
+Example:
+Student records
+Product lists
+Employee lists
+
+When to Use LinkedList?
+Frequent insertion/deletion.
+Less random access.
+
+Example:
+Browser history
+Undo/Redo functionality
+Memory Usage
+
+LinkedList consumes more memory because every node stores extra references.
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+Q4: If LinkedList insertion is O(1), why do most developers still prefer ArrayList?
+Answer:
+
+Although insertion in LinkedList can be O(1), finding the position first takes O(n) time. ArrayList provides much faster access, better cache performance, and lower memory usage. Therefore, ArrayList is preferred in most real-world applications.
+
+Best-case insertion in ArrayList: O(1)
+Insert at the end.
+Enough capacity available.
+No shifting or resizing needed.
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+Q5: What is the difference between Method Overloading and Method Overriding?
+
+Method Overriding means a child class provides its own implementation of a method that already exists in the parent class.
+
+The method name and parameters must be the same.
+
+Example:
+
+class Animal {
+    void sound() {
+        System.out.println("Animal sound");
+    }
+}
+
+class Dog extends Animal {
+    @Override
+    void sound() {
+        System.out.println("Bark");
+    }
+}
+
+Here sound() is overridden.
+Method Overloading
+
+
+Method Overloading means having multiple methods with the same name but different parameters in the same class.
+
+The difference can be:
+
+Number of parameters
+Type of parameters
+Order of parameters
+Example
+class Calculator {
+
+    int sum(int a, int b) {
+        return a + b;
+    }
+
+    int sum(int a, int b, int c) {
+        return a + b + c;
+    }
+}
+
+Here sum() is overloaded because:
+
+Method name is same: sum
+Parameters are different:sum(int a, int b)
+                         sum(int a, int b, int c)
+
+     Method Overloading	                   Method Overriding
+Same method name, different parameters	  Same method name, same parameters
+Occurs in same class	                 Occurs between parent and child class
+Compile-time polymorphism	         Runtime polymorphism
+Inheritance not required	          Inheritance required
+---------------------------------------------------------------------------------------------------------------------------------------------------------
