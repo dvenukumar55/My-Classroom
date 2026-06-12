@@ -18,6 +18,9 @@ app.use((req,res,next)=>{
    console.log(req.method, req.url);
    next();
 });
+app.get("/", (req, res) => {
+  res.send("MyClass Backend is Running 🚀");
+});
 
 app.use("/api/auth",require("./routes/authRoutes"));
 
