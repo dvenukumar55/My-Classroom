@@ -56,7 +56,7 @@ loginForm.addEventListener("submit", async (e) => {
 
   }
 
-  const res = await fetch("https://my-classroom-backend.onrender.com", {
+  const res = await fetch("https://my-classroom-backend.onrender.com/api/auth/login", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
