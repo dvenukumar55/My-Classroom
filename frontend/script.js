@@ -102,7 +102,7 @@ localStorage.getItem("token");
 
 const res =
 await fetch(
-"http://localhost:5000/api/announcements",
+"https://my-classroom-backend.onrender.com/api/announcements",
 {
 method:"POST",
 
@@ -160,7 +160,7 @@ if(uploadFileBtn){
 
       const res =
       await fetch(
-        "http://localhost:5000/api/files",
+        "https://my-classroom-backend.onrender.com/api/files",
         {
           method:"POST",
 
@@ -200,7 +200,7 @@ async function deleteAnnouncement(id){
   const res =
   await fetch(
 
-    `http://localhost:5000/api/announcements/${id}`,
+    `https://my-classroom-backend.onrender.com/api/announcements/${id}`,
 
     {
       method:"DELETE",
@@ -228,7 +228,7 @@ async function loadAnnouncements(){
  
 const res =
 await fetch(
-"http://localhost:5000/api/announcements"
+"https://my-classroom-backend.onrender.com/api/announcements"
 );
 
 const data =await res.json();
@@ -302,7 +302,7 @@ async function loadFiles(){
 
   const res =
   await fetch(
-    "http://localhost:5000/api/files"
+    "https://my-classroom-backend.onrender.com/api/files"
   );
 
   const data =
@@ -340,7 +340,7 @@ async function loadFiles(){
       </h3>
 
       <a
-      href="http://localhost:5000/${file.filepath}"
+      href="https://my-classroom-backend.onrender.com/${file.filepath}"
       target="_blank">
 
       Open File
@@ -384,7 +384,7 @@ async function deleteFile(id){
     const res =
     await fetch(
 
-      `http://localhost:5000/api/files/${id}`,
+      `https://my-classroom-backend.onrender.com/api/files/${id}`,
 
       {
         method:"DELETE",
@@ -427,7 +427,7 @@ async function deleteAnnouncement(id){
   const res =
   await fetch(
 
-    `http://localhost:5000/api/announcements/${id}`,
+    `https://my-classroom-backend.onrender.com/api/announcements/${id}`,
 
     {
       method:"DELETE",
