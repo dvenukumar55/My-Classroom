@@ -71,7 +71,7 @@ loginForm.addEventListener("submit", async (e) => {
     localStorage.setItem("token", data.token);
     localStorage.setItem("role", data.role);
 
-    window.location.href = "index.html";
+    window.location.href = "dashboard.html";
 
   } else {
 

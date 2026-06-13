@@ -15,7 +15,7 @@ if(logoutBtn){
     localStorage.clear();
 
     window.location.href =
-    "login.html";
+    "dashboard.html";
 
   });
 
