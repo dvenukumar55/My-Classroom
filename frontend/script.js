@@ -172,12 +172,19 @@ if(uploadFileBtn){
           body:formData
         }
       );
+  
+      const data = await res.json();
+console.log(data);
 
       if(res.ok){
 
         alert("File Uploaded");
 
         loadFiles(); // reload cards
+
+      }else{
+
+  alert(data.msg || "Upload Failed");
 
       }
 
