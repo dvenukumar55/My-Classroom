@@ -3,6 +3,9 @@ console.log("MyClass Loaded");
 
 const role = localStorage.getItem("role");
 
+if(!localStorage.getItem("token")){
+  window.location.href = "index.html";
+}
 // LOGOUT
 
 const logoutBtn =
@@ -15,7 +18,7 @@ if(logoutBtn){
     localStorage.clear();
 
     window.location.href =
-    "dashboard.html";
+    "index.html";
 
   });
 
